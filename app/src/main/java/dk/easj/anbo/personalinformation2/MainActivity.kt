@@ -2,7 +2,7 @@ package dk.easj.anbo.personalinformation2
 
 import android.app.Activity
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_CANCELED) {
             mainMessageTextView.text = "Cancelled"
-            Log.d("MINE", "Cancelled")
+            Log.d("MINE", "You cancelled")
         } else {
             val name = data?.getStringExtra(NAME)
             val age = data?.getIntExtra(AGE, 0)
