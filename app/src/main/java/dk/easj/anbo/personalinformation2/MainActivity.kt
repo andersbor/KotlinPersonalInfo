@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             val name = data?.getStringExtra(NAME)
             val age = data?.getIntExtra(AGE, 0)
             mainMessageTextView.text = ("Name: $name Age: $age")
-            Log.d("MINE", data?.getStringExtra(NAME))
+            Log.d("MINE", "Name " + name)
         }
     }
 }
